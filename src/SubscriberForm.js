@@ -9,7 +9,10 @@ function SubscriberFrom() {
 
     const handleSubmit = event => {
         event.preventDefault();
-        console.log(`Form Submitted! ${name} : ${email}`)
+        console.log(`Form Submitted! ${name} : ${email}`);
+        // clear log each time button is clicked
+        setName("");
+        setEmail("");
     };
 
     return (
