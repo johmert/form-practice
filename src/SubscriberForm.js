@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function SubscriberFrom() {
+function SubscriberFrom({createSubscriber}) {
     const [name, setName] = useState("");
     const handleNameChange = event => setName(event.target.value);
 
@@ -10,6 +10,7 @@ function SubscriberFrom() {
     const handleSubmit = event => {
         event.preventDefault();
         console.log(`Form Submitted! ${name} : ${email}`);
+        createSubscriber({name,email});
         // clear log each time button is clicked
         setName("");
         setEmail("");
